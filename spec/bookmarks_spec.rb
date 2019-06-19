@@ -22,9 +22,10 @@ describe Bookmarks do
 
   describe '.create' do
     it 'creates new bookmark' do
-      Bookmarks.create(url: 'http://facebook.com', title: 'Facebook')
-
-      expect(Bookmarks.all).to include 'Facebook'
+      bookmark = Bookmarks.create(url: 'http://www.facebook.com', title: 'Facebook').first
+      p bookmark
+      expect(bookmark['title']).to eq('Facebook')
+      expect(bookmark['url']).to eq('http://www.facebook.com')
     end
   end
 
