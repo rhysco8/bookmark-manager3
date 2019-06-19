@@ -8,7 +8,7 @@ describe Bookmarks do
     it 'prints a list of bookmarks' do
       connection = PG.connect(dbname: 'bookmark_manager_test')
 
-      connection.exec("INSERT INTO bookmarks (url) VALUES ('http://www.pomodoro.com');")
+      connection.exec("INSERT INTO bookmarks (url) VALUES('http://www.pomodoro.com');")
       connection.exec("INSERT INTO bookmarks (url) VALUES('http://www.tomato-timer.com');")
       connection.exec("INSERT INTO bookmarks (url) VALUES('http://www.google.com');")
 
