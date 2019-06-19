@@ -3,9 +3,9 @@
 feature 'Viewing bookmarks' do
   scenario 'Visit bookmarks page and be presented with a list of bookmarks' do
 
-    Bookmarks.create(url: 'http://www.pomodoro.com')
-    Bookmarks.create(url: 'http://www.tomato-timer.com')
-    Bookmarks.create(url: 'http://www.google.com')
+    Bookmarks.create(url: 'http://www.pomodoro.com', title: 'Pomodoro')
+    Bookmarks.create(url: 'http://www.tomato-timer.com', title: 'Tomato-Timer')
+    Bookmarks.create(url: 'http://www.google.com', title: 'Google')
 
     visit('/bookmarks')
 
@@ -18,11 +18,11 @@ feature 'Viewing bookmarks' do
   scenario 'add new bookmark' do
     visit('/bookmarks')
     click_button("Add new bookmark")
-    fill_in 'new_bookmark', with: 'www.facebook.com'
+    fill_in 'new_bookmark_url', with: 'www.facebook.com'
     click_button('Add bookmark')
 
     expect(page).to have_content 'www.facebook.com'
-    
+
   end
 
 end
