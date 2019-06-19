@@ -8,23 +8,23 @@ describe Bookmarks do
     it 'prints a list of bookmarks' do
       connection = PG.connect(dbname: 'bookmark_manager_test')
 
-      connection.exec("INSERT INTO bookmarks (url) VALUES('http://www.pomodoro.com');")
-      connection.exec("INSERT INTO bookmarks (url) VALUES('http://www.tomato-timer.com');")
-      connection.exec("INSERT INTO bookmarks (url) VALUES('http://www.google.com');")
+      connection.exec("INSERT INTO bookmarks (url, title) VALUES('http://www.pomodoro.com', 'Pomodoro');")
+      connection.exec("INSERT INTO bookmarks (url, title) VALUES('http://www.tomato-timer.com', 'Tomato-Timer');")
+      connection.exec("INSERT INTO bookmarks (url, title) VALUES('http://www.google.com', 'Google');")
 
       bookmarks = Bookmarks.all
 
-      expect(bookmarks).to include('http://www.google.com')
-      expect(bookmarks).to include('http://www.pomodoro.com')
-      expect(bookmarks).to include('http://www.tomato-timer.com')
+      expect(bookmarks).to include('Google')
+      expect(bookmarks).to include('Pomodoro')
+      expect(bookmarks).to include('Tomato-Timer')
     end
   end
 
   describe '.create' do
     it 'creates new bookmark' do
-      Bookmarks.create(url: 'http://facebook.com')
+      Bookmarks.create(url: 'http://facebook.com', title: 'Facebook')
 
-      expect(Bookmarks.all).to include 'http://facebook.com'
+      expect(Bookmarks.all).to include 'Facebook'
     end
   end
 

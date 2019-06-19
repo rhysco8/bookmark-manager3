@@ -1,9 +1,10 @@
-These are your bookmarks: <%=@bookmarks%>
+These are your bookmarks:<br>
+<% @bookmarks.each do |bookmark| %>
+  <li><%= bookmark %></li>
+<% end %>
 
 <div>
   <form action="/add_bookmark" method="get">
     <input type="submit" value="Add new bookmark">
   </form>
 </div>
-
-

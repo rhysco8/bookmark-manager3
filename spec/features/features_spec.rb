@@ -10,18 +10,19 @@ feature 'Viewing bookmarks' do
     visit('/bookmarks')
 
     expect(page).to have_content 'These are your bookmarks:'
-    expect(page).to have_content 'www.pomodoro.com'
-    expect(page).to have_content 'www.google.com'
-    expect(page).to have_content 'www.tomato-timer.com'
+    expect(page).to have_content 'Pomodoro'
+    expect(page).to have_content 'Google'
+    expect(page).to have_content 'Tomato-Timer'
   end
 
   scenario 'add new bookmark' do
     visit('/bookmarks')
     click_button("Add new bookmark")
     fill_in 'new_bookmark_url', with: 'www.facebook.com'
+    fill_in 'new_bookmark_title', with: 'Facebook'
     click_button('Add bookmark')
 
-    expect(page).to have_content 'www.facebook.com'
+    expect(page).to have_content 'Facebook'
 
   end
 
