@@ -19,4 +19,13 @@ describe Bookmarks do
       expect(bookmarks).to include('http://www.tomato-timer.com')
     end
   end
+
+  describe '.create' do
+    it 'creates new bookmark' do
+      Bookmarks.create(url: 'http://facebook.com')
+
+      expect(Bookmarks.all).to include 'http://facebook.com'
+    end
+  end
+
 end
