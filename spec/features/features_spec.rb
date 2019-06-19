@@ -15,4 +15,15 @@ feature 'Viewing bookmarks' do
     expect(page).to have_content 'www.google.com'
     expect(page).to have_content 'www.tomato-timer.com'
   end
+
+  scenario 'add new bookmark' do
+    visit('/bookmarks')
+    click_button("Add new bookmark")
+    fill_in 'new_bookmark', with: 'www.facebook.com'
+    click_button('Add bookmark')
+
+    expect(page).to have_content 'www.facebook.com'
+    
+  end
+
 end

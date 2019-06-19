@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/Rhys/Projects/afternoon-challenges/week4/bookmark-manager2/spec/bookmarks_spec.rb": [
+      "/Users/petra/Google Drive/projects/challenges/pairs/pair-bookmark-manager/bookmark-manager3/spec/bookmarks_spec.rb": [
         null,
         null,
         1,
@@ -25,7 +25,7 @@
         null,
         null
       ],
-      "/Users/Rhys/Projects/afternoon-challenges/week4/bookmark-manager2/spec/features/features_spec.rb": [
+      "/Users/petra/Google Drive/projects/challenges/pairs/pair-bookmark-manager/bookmark-manager3/spec/features/features_spec.rb": [
         null,
         null,
         1,
@@ -42,10 +42,21 @@
         1,
         1,
         1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
         null,
         null
       ]
     },
-    "timestamp": 1560952033
+    "timestamp": 1560954642
   }
 }

@@ -9,9 +9,14 @@ The goal of this app is to be a bookmark manager.
 User Stories
 ----
 ```
-As a conscientious consumer of online content
-So that I can relive my past favourite webpages
-I want to be able to see a list of my saved bookmarks
+As a user
+So that I can see a list of my favorite webpages
+I want to be able to see a list of my bookmarks
+
+As a user
+So that I can save new pages
+I want to be able add to my list of bookmarks
+
 ```
 
 ![domain model picture coming soon]( )
